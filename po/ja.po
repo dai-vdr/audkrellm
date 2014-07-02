@@ -1,0 +1,436 @@
+# AudKrellM: GKrellM Audacious Plugin
+# Copyright (C) 2007 dai <d+audacious@vdr.jp>
+# This file is distributed under the same license as the audkrellm package.
+# dai <d+audacious@vdr.jp>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: audkrellm 0.0.0\n"
+"Report-Msgid-Bugs-To: d+audacious@vdr.jp\n"
+"POT-Creation-Date: 2007-06-11 22:08+0900\n"
+"PO-Revision-Date: 2007-06-11 22:57+0900\n"
+"Last-Translator: dai <d+po@vdr.jp>\n"
+"Language-Team: ja <ja@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/audkrellm.c:87 src/audkrellm.c:96
+msgid "AudKrellM Error"
+msgstr "AudKrellM エラー"
+
+#: src/audkrellm-options-entries.c:42
+msgid "Audacious Executable:"
+msgstr "Audacious 実行ファイル:"
+
+#: src/audkrellm-options-entries.c:54
+msgid "Krell label:"
+msgstr "Krell ラベル:"
+
+#: src/audkrellm-options-entries.c:64
+msgid "Scroll separator:"
+msgstr "スクロールセパレータ:"
+
+#: src/audkrellm-options-info.c:38
+msgid ""
+"AudKrellM is a GKrellM Audacious-plugin which allows you to control\n"
+"Audacious from within GKrellM. It features some cool things, such as:\n"
+msgstr ""
+"AudKrellM は GKrellM から Audacious を操作できる GKrellM Audacious\n"
+"プラグインです．以下のような特徴を持っています:\n"
+
+#: src/audkrellm-options-info.c:41
+msgid ""
+"- A scrolling title.\n"
+"- A Krell which indicates where you are in a song.\n"
+"- Themeable buttons for controlling Audacious.\n"
+"- A gtk-popup-menu with misc. Audacious-functions.\n"
+msgstr ""
+"- 曲名のスクロール\n"
+"- 現在の曲名を Krell に表示\n"
+"- テーマで変更可能な Audacious 操作ボタン\n"
+"- Audacious のコマンド操作用の GTK ポップアップメニュー\n"
+
+#: src/audkrellm-options-info.c:47
+msgid "<b>How to use AudKrellM:\n"
+msgstr "<b>AudKrellM の使い方:\n"
+
+#: src/audkrellm-options-info.c:49
+msgid ""
+"You can do some cool stuff with the AudKrellM-Krell,by using your mouse.\n"
+msgstr ""
+"AudKrellM の Krell をマウスで操作することによって、様々な操作を行えます．\n"
+
+#: src/audkrellm-options-info.c:53
+msgid "<b>Mouse actions:\n"
+msgstr "<b>マウス操作:\n"
+
+#: src/audkrellm-options-info.c:55
+msgid "<b>\tLeft mouse-button: "
+msgstr "<b>\t左ボタン: "
+
+#: src/audkrellm-options-info.c:56
+msgid "Jump through song.\n"
+msgstr "曲の途中にジャンプします．\n"
+
+#: src/audkrellm-options-info.c:58
+msgid "<b>\tMiddle mouse-button: "
+msgstr "<b>\t中ボタン: "
+
+#: src/audkrellm-options-info.c:59
+msgid ""
+"Pause/stop/play Audacious (configurable),\n"
+"\t or launch Audacious if it's not running.\n"
+msgstr ""
+"Audacious の一時停止/停止/再生 (設定可能)、\n"
+"\t または Audacious が起動していなければ、起動します．\n"
+
+#: src/audkrellm-options-info.c:62
+msgid "<b>\tRight mouse-button: "
+msgstr "<b>\t右ボタン: "
+
+#: src/audkrellm-options-info.c:63
+msgid "Popup-menu.\n"
+msgstr "ポップアップメニューを表示します．\n"
+
+#: src/audkrellm-options-info.c:66
+msgid "<b>The led indicator on the Krell indicates several things:\n"
+msgstr "<b>Krell の LED インジケータは以下の状態を示します:\n"
+
+#: src/audkrellm-options-info.c:69
+msgid "<b>\tConstant red: "
+msgstr "<b>\t赤: "
+
+#: src/audkrellm-options-info.c:70
+msgid "Audacious is turned off.\n"
+msgstr "Audacious は起動していません．\n"
+
+#: src/audkrellm-options-info.c:72
+msgid "<b>\tConstant green: "
+msgstr "<b>\t緑: "
+
+#: src/audkrellm-options-info.c:73
+msgid "Audacious is playing.\n"
+msgstr "Audacious は演奏しています．\n"
+
+#: src/audkrellm-options-info.c:75
+msgid "<b>\tRed, blinking green: "
+msgstr "<b>\t赤、緑に点滅: "
+
+#: src/audkrellm-options-info.c:76
+msgid "Audacious is stopped.\n"
+msgstr "Audacious は停止しています．\n"
+
+#: src/audkrellm-options-info.c:78
+msgid "<b>\tGreen, blinking red: "
+msgstr "<b>\t緑、赤に点滅: "
+
+#: src/audkrellm-options-info.c:79
+msgid "Audacious is paused.\n"
+msgstr "Audacious は一時停止しています．\n"
+
+#: src/audkrellm-options-info.c:82
+msgid "<b>Configurabilities:\n"
+msgstr "<b>設定項目:\n"
+
+#: src/audkrellm-options-info.c:84
+msgid ""
+"AudKrellM has some configurabilities for if you like to\n"
+"configure some stuff:\n"
+msgstr "AudKrellM は以下の設定可能な項目を持っています:\n"
+
+#: src/audkrellm-options-info.c:88
+msgid "<b>\tAudacious Executable:\n"
+msgstr "<b>\tAudacious 実行ファイル:\n"
+
+#: src/audkrellm-options-info.c:90
+msgid ""
+"\tHow the Audacious-executable (+ eventually path)\n"
+"\tis called on your computer. Default is audacious\n"
+msgstr ""
+"\tコンピュータ上で Audacious の実行ファイルがどのように呼び出されるか\n"
+"\t(すなわちパス)を指定します．デフォルトは audacious です．\n"
+
+#: src/audkrellm-options-info.c:94
+msgid "<b>\tKrell label:\n"
+msgstr "<b>\tKrell ラベル:\n"
+
+#: src/audkrellm-options-info.c:95
+msgid ""
+"\tThe text-label you want in the krell when audacious isn't running/"
+"playing.\n"
+msgstr ""
+"\taudacious が起動していない、または演奏していないときに Krell に表示するテキ"
+"ストラベルを指定します．\n"
+
+#: src/audkrellm-options-info.c:98
+msgid "<b>\tScroll separator:\n"
+msgstr "<b>\tスクロールセパレータ:\n"
+
+#: src/audkrellm-options-info.c:99
+msgid ""
+"\tThe little text that will be appended at the end of the scrolled text.\n"
+"\tIt defaults to ' ++++ ' (that's 1 space, 4 +'s and 1 space).\n"
+msgstr ""
+"\tスクロールテキストの終わりに表示される小さなテキストです．\n"
+"\tデフォルトは ' ++++ ' (1 スペース、4 +、1 スペース) です．\n"
+
+#: src/audkrellm-options-info.c:104
+msgid "<b>\tAudacious Auto Launch:\n"
+msgstr "<b>\tAudacious を自動的に起動する:\n"
+
+#: src/audkrellm-options-info.c:105
+msgid "\tAuto launch Audacious when starting AudKrellM.\n"
+msgstr "\tAudKrellM が起動した際に自動的に Audacious を起動します．\n"
+
+#: src/audkrellm-options-info.c:108
+msgid "<b>\tAuto Mainwindow Close:\n"
+msgstr "<b>\tメインウィンドウを自動的に閉じる:\n"
+
+#: src/audkrellm-options-info.c:109
+msgid ""
+"\tAutomatically close the Audacious-mainwindow \n"
+"\twhen AudKrellM starts, and Audacious is already running, or when\n"
+"\tlaunching Audacious while AudKrellM runs. This option also enables the\n"
+"\tmainwindow back when you quit gkrellm (some people really do).\n"
+msgstr ""
+"\tAudKrellM が起動したときに Audacious が起動していた場合、\n"
+"\tまたは AudKrellM が起動しているときに Audacious が起動した場合、\n"
+"\tAudacious のメインウィンドウを自動的に閉じます．\n"
+"\tまた、このオプションが有効ならば、GKrellM を終了した際に\n"
+"\tメインウィンドウは元通りになります (この動作を期待する人々がいます)．\n"
+
+#: src/audkrellm-options-info.c:115
+msgid "<b>\tAuto hide all Audacious windows:\n"
+msgstr "<b>\tすべての Audacious ウィンドウを自動的に隠す:\n"
+
+#: src/audkrellm-options-info.c:116
+msgid "\tAutomatically hide all Audacious windows when AudKrellM starts.\n"
+msgstr ""
+"\tAudKrellM が起動した際に Audacious のすべてのウィンドウを自動的に隠しま"
+"す．\n"
+
+#: src/audkrellm-options-info.c:119
+msgid "<b>\tDraw minus (-) with remaining time:\n"
+msgstr "<b>\t残り時間をマイナス (-) をつけて表示する:\n"
+
+#: src/audkrellm-options-info.c:121
+msgid ""
+"\tDraw a minus (-) before the remaining time, when you have\n"
+"\tthe output-time displaying remaining time.\n"
+msgstr ""
+"\t表示する時間を残り時間にしている場合、\n"
+"\t残り時間をマイナス (-) をつけて表示します．\n"
+
+#: src/audkrellm-options-info.c:125
+msgid "<b>\tEnable scrolling title:\n"
+msgstr "<b>\t曲名スクロールを有効にする:\n"
+
+#: src/audkrellm-options-info.c:126
+msgid "\tEnable/disable the scrolling title-panel.\n"
+msgstr "\t曲名パネルのスクロールを有効/無効にします．\n"
+
+#: src/audkrellm-options-info.c:130
+msgid "<b>\tDraw in time bar:\n"
+msgstr "<b>\t時間バーへの表示:\n"
+
+#: src/audkrellm-options-info.c:131
+msgid ""
+"\tCheck whether to draw the output time or 'audacious' in\n"
+"\tthe time-krell panel. \n"
+msgstr ""
+"\t時間 Krell パネルに演奏時間を表示するか 'audacious' ラベルを\n"
+"\t表示するかを選択します．\n"
+
+#: src/audkrellm-options-info.c:135
+msgid "<b>\tMMB on krell click:\n"
+msgstr "<b>\tKrell でのマウス中ボタンクリック:\n"
+
+#: src/audkrellm-options-info.c:136
+msgid ""
+"\tCheck whether AudKrellM should pause/continue or\n"
+"\tstop/play the current song on a MMB-click on the krell. MMB Click will\n"
+"\talways start playing the song if Audacious isn't playing. \n"
+msgstr ""
+"\tKrell をマウス中ボタンクリックすることで、現在の曲を一時停止/再開するか、\n"
+"\t停止/演奏するかを選択します．Audacious が演奏していなければ、\n"
+"\t常にマウス中ボタンクリックによって演奏を開始します．\n"
+
+#: src/audkrellm-options-info.c:141
+msgid "<b>\tOutput time format:\n"
+msgstr "<b>\t表示する時間のフォーマット:\n"
+
+#: src/audkrellm-options-info.c:142
+msgid ""
+"\tDecide whether to draw the elapsed time, or the remaining time\n"
+"\tas output-time in the Krell.\n"
+msgstr "\tKrell に表示する時間は、経過時間か、残り時間かを選択します．\n"
+
+#: src/audkrellm-options-info.c:147
+msgid "Help"
+msgstr "ヘルプ"
+
+#: src/audkrellm-options-info.c:159
+#, c-format
+msgid ""
+"AudKrellM %s\n"
+"GKrellM Audacious Plugin\n"
+"\n"
+"Copyright (C) 2007 dai <d+audacious@vdr.jp>\n"
+"\n"
+"Based on: GKrellMMS: GKrellM XMMS Plugin\n"
+"Copyright (C) 2000-2002 Sander Klein Lebbink <sander@cerberus.demon.nl>\n"
+"Current GKrellMMS Maintainer: Sjoerd Simons <sjoerd@luon.net>\n"
+"\n"
+"Released under the GNU General Public License\n"
+msgstr ""
+"AudKrellM %s\n"
+"GKrellM Audacious プラグイン\n"
+"\n"
+"Copyright (C) 2007 dai <d+audacious@vdr.jp>\n"
+"\n"
+"GKrellMMS: GKrellM XMMS プラグインより派生\n"
+"Copyright (C) 2000-2002 Sander Klein Lebbink <sander@cerberus.demon.nl>\n"
+"現在の GKrellMMS メンテナ: Sjoerd Simons <sjoerd@luon.net>\n"
+"\n"
+"GNU General Public License のもとにリリースされています\n"
+
+#: src/audkrellm-options-info.c:171
+msgid "About"
+msgstr "AudKrellM について"
+
+#: src/audkrellm-options-switches.c:68
+msgid "Draw in time bar:"
+msgstr "時間バーへの表示:"
+
+#: src/audkrellm-options-switches.c:75
+msgid "Output time"
+msgstr "演奏時間"
+
+#: src/audkrellm-options-switches.c:89
+msgid "Audacious-text"
+msgstr "Audacious テキスト"
+
+#: src/audkrellm-options-switches.c:99
+msgid "Middle mouse click on krell will:"
+msgstr "Krell でのマウス中ボタンクリック:"
+
+#: src/audkrellm-options-switches.c:106
+msgid "Pause/Continue song"
+msgstr "曲を一時停止/再開"
+
+#: src/audkrellm-options-switches.c:120
+msgid "Stop/Play song"
+msgstr "曲を停止/演奏"
+
+#: src/audkrellm-options-switches.c:130
+msgid "Output time format:"
+msgstr "表示する時間のフォーマット:"
+
+#: src/audkrellm-options-switches.c:137
+msgid "Elapsed time"
+msgstr "経過時間"
+
+#: src/audkrellm-options-switches.c:151
+msgid "Remaining time"
+msgstr "残り時間"
+
+#: src/audkrellm-options-toggles.c:40
+msgid "Auto launch Audacious on AudKrellM startup"
+msgstr "AudKrellM が起動した際に自動的に Audacious を起動"
+
+#: src/audkrellm-options-toggles.c:47
+msgid "Auto close (and open) Audacious Mainwin"
+msgstr "Audacious メインウィンドウを自動的に閉じる(または開く)"
+
+#: src/audkrellm-options-toggles.c:54
+msgid "Auto hide all Audacious windows on Audacious startup"
+msgstr "AudKrellM が起動した際にすべての Audacious ウィンドウを自動的に隠す"
+
+#: src/audkrellm-options-toggles.c:61
+msgid "Enable scrolling title panel"
+msgstr "曲名のスクロール"
+
+#: src/audkrellm-options-toggles.c:68
+msgid "Draw minus (-) when displaying remaining time"
+msgstr "残り時間をマイナス (-) をつけて表示"
+
+#: src/audkrellm-options.c:73
+msgid "Configs"
+msgstr "設定"
+
+#: src/audkrellm-popup-menu.c:115
+msgid "/Toggles..."
+msgstr "/トグル..."
+
+#: src/audkrellm-popup-menu.c:116
+msgid "/Toggles.../Main Window"
+msgstr "/トグル.../メインウィンドウ"
+
+#: src/audkrellm-popup-menu.c:118
+msgid "/Toggles.../Playlist"
+msgstr "/トグル.../プレイリスト"
+
+#: src/audkrellm-popup-menu.c:120
+msgid "/Toggles.../EQ"
+msgstr "/トグル.../イコライザ"
+
+#: src/audkrellm-popup-menu.c:122
+msgid "/Toggles.../Repeat"
+msgstr "/トグル.../リピート"
+
+#: src/audkrellm-popup-menu.c:124
+msgid "/Toggles.../Shuffle"
+msgstr "/トグル.../シャッフル"
+
+#: src/audkrellm-popup-menu.c:128
+msgid "/Toggles.../-"
+msgstr "/トグル.../-"
+
+#: src/audkrellm-popup-menu.c:129
+msgid "/Toggles.../Always on top on"
+msgstr "/トグル.../常に最前面に配置を有効"
+
+#: src/audkrellm-popup-menu.c:131
+msgid "/Toggles.../Always on top off"
+msgstr "/トグル.../常に最前面に配置を無効"
+
+#: src/audkrellm-popup-menu.c:136
+msgid "/Audacious.../Previous"
+msgstr "/Audacious.../前の曲"
+
+#: src/audkrellm-popup-menu.c:138
+msgid "/Audacious.../Play"
+msgstr "/Audacious.../演奏"
+
+#: src/audkrellm-popup-menu.c:140
+msgid "/Audacious.../Pause"
+msgstr "/Audacious.../一時停止"
+
+#: src/audkrellm-popup-menu.c:142
+msgid "/Audacious.../Stop"
+msgstr "/Audacious.../停止"
+
+#: src/audkrellm-popup-menu.c:144
+msgid "/Audacious.../Next"
+msgstr "/Audacious.../次の曲"
+
+#: src/audkrellm-popup-menu.c:149 src/audkrellm-popup-menu.c:180
+msgid "/AudKrellM Options"
+msgstr "/AudKrellM オプション"
+
+#: src/audkrellm-popup-menu.c:154
+msgid "/Open file(s)"
+msgstr "/ファイルを演奏"
+
+#: src/audkrellm-popup-menu.c:157
+msgid "/Audacious Prefs"
+msgstr "/Audacious の設定"
+
+#: src/audkrellm-popup-menu.c:163
+msgid "/Quit Audacious"
+msgstr "/Audacious を終了"
+
+#: src/audkrellm-popup-menu.c:175
+msgid "/Launch Audacious"
+msgstr "/Audacious の起動"

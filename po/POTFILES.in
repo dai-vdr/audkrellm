@@ -1,0 +1,8 @@
+# List of source files which contain translatable strings.
+src/audkrellm.c
+src/audkrellm-options-entries.c
+src/audkrellm-options-info.c
+src/audkrellm-options-switches.c
+src/audkrellm-options-toggles.c
+src/audkrellm-options.c
+src/audkrellm-popup-menu.c

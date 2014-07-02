@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: d+audacious@vdr.jp\n"
+"POT-Creation-Date: 2007-06-11 22:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/audkrellm.c:87 src/audkrellm.c:96
+msgid "AudKrellM Error"
+msgstr ""
+
+#: src/audkrellm-options-entries.c:42
+msgid "Audacious Executable:"
+msgstr ""
+
+#: src/audkrellm-options-entries.c:54
+msgid "Krell label:"
+msgstr ""
+
+#: src/audkrellm-options-entries.c:64
+msgid "Scroll separator:"
+msgstr ""
+
+#: src/audkrellm-options-info.c:38
+msgid ""
+"AudKrellM is a GKrellM Audacious-plugin which allows you to control\n"
+"Audacious from within GKrellM. It features some cool things, such as:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:41
+msgid ""
+"- A scrolling title.\n"
+"- A Krell which indicates where you are in a song.\n"
+"- Themeable buttons for controlling Audacious.\n"
+"- A gtk-popup-menu with misc. Audacious-functions.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:47
+msgid "<b>How to use AudKrellM:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:49
+msgid ""
+"You can do some cool stuff with the AudKrellM-Krell,by using your mouse.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:53
+msgid "<b>Mouse actions:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:55
+msgid "<b>\tLeft mouse-button: "
+msgstr ""
+
+#: src/audkrellm-options-info.c:56
+msgid "Jump through song.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:58
+msgid "<b>\tMiddle mouse-button: "
+msgstr ""
+
+#: src/audkrellm-options-info.c:59
+msgid ""
+"Pause/stop/play Audacious (configurable),\n"
+"\t or launch Audacious if it's not running.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:62
+msgid "<b>\tRight mouse-button: "
+msgstr ""
+
+#: src/audkrellm-options-info.c:63
+msgid "Popup-menu.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:66
+msgid "<b>The led indicator on the Krell indicates several things:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:69
+msgid "<b>\tConstant red: "
+msgstr ""
+
+#: src/audkrellm-options-info.c:70
+msgid "Audacious is turned off.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:72
+msgid "<b>\tConstant green: "
+msgstr ""
+
+#: src/audkrellm-options-info.c:73
+msgid "Audacious is playing.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:75
+msgid "<b>\tRed, blinking green: "
+msgstr ""
+
+#: src/audkrellm-options-info.c:76
+msgid "Audacious is stopped.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:78
+msgid "<b>\tGreen, blinking red: "
+msgstr ""
+
+#: src/audkrellm-options-info.c:79
+msgid "Audacious is paused.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:82
+msgid "<b>Configurabilities:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:84
+msgid ""
+"AudKrellM has some configurabilities for if you like to\n"
+"configure some stuff:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:88
+msgid "<b>\tAudacious Executable:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:90
+msgid ""
+"\tHow the Audacious-executable (+ eventually path)\n"
+"\tis called on your computer. Default is audacious\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:94
+msgid "<b>\tKrell label:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:95
+msgid ""
+"\tThe text-label you want in the krell when audacious isn't running/"
+"playing.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:98
+msgid "<b>\tScroll separator:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:99
+msgid ""
+"\tThe little text that will be appended at the end of the scrolled text.\n"
+"\tIt defaults to ' ++++ ' (that's 1 space, 4 +'s and 1 space).\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:104
+msgid "<b>\tAudacious Auto Launch:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:105
+msgid "\tAuto launch Audacious when starting AudKrellM.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:108
+msgid "<b>\tAuto Mainwindow Close:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:109
+msgid ""
+"\tAutomatically close the Audacious-mainwindow \n"
+"\twhen AudKrellM starts, and Audacious is already running, or when\n"
+"\tlaunching Audacious while AudKrellM runs. This option also enables the\n"
+"\tmainwindow back when you quit gkrellm (some people really do).\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:115
+msgid "<b>\tAuto hide all Audacious windows:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:116
+msgid "\tAutomatically hide all Audacious windows when AudKrellM starts.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:119
+msgid "<b>\tDraw minus (-) with remaining time:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:121
+msgid ""
+"\tDraw a minus (-) before the remaining time, when you have\n"
+"\tthe output-time displaying remaining time.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:125
+msgid "<b>\tEnable scrolling title:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:126
+msgid "\tEnable/disable the scrolling title-panel.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:130
+msgid "<b>\tDraw in time bar:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:131
+msgid ""
+"\tCheck whether to draw the output time or 'audacious' in\n"
+"\tthe time-krell panel. \n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:135
+msgid "<b>\tMMB on krell click:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:136
+msgid ""
+"\tCheck whether AudKrellM should pause/continue or\n"
+"\tstop/play the current song on a MMB-click on the krell. MMB Click will\n"
+"\talways start playing the song if Audacious isn't playing. \n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:141
+msgid "<b>\tOutput time format:\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:142
+msgid ""
+"\tDecide whether to draw the elapsed time, or the remaining time\n"
+"\tas output-time in the Krell.\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:147
+msgid "Help"
+msgstr ""
+
+#: src/audkrellm-options-info.c:159
+#, c-format
+msgid ""
+"AudKrellM %s\n"
+"GKrellM Audacious Plugin\n"
+"\n"
+"Copyright (C) 2007 dai <d+audacious@vdr.jp>\n"
+"\n"
+"Based on: GKrellMMS: GKrellM XMMS Plugin\n"
+"Copyright (C) 2000-2002 Sander Klein Lebbink <sander@cerberus.demon.nl>\n"
+"Current GKrellMMS Maintainer: Sjoerd Simons <sjoerd@luon.net>\n"
+"\n"
+"Released under the GNU General Public License\n"
+msgstr ""
+
+#: src/audkrellm-options-info.c:171
+msgid "About"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:68
+msgid "Draw in time bar:"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:75
+msgid "Output time"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:89
+msgid "Audacious-text"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:99
+msgid "Middle mouse click on krell will:"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:106
+msgid "Pause/Continue song"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:120
+msgid "Stop/Play song"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:130
+msgid "Output time format:"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:137
+msgid "Elapsed time"
+msgstr ""
+
+#: src/audkrellm-options-switches.c:151
+msgid "Remaining time"
+msgstr ""
+
+#: src/audkrellm-options-toggles.c:40
+msgid "Auto launch Audacious on AudKrellM startup"
+msgstr ""
+
+#: src/audkrellm-options-toggles.c:47
+msgid "Auto close (and open) Audacious Mainwin"
+msgstr ""
+
+#: src/audkrellm-options-toggles.c:54
+msgid "Auto hide all Audacious windows on Audacious startup"
+msgstr ""
+
+#: src/audkrellm-options-toggles.c:61
+msgid "Enable scrolling title panel"
+msgstr ""
+
+#: src/audkrellm-options-toggles.c:68
+msgid "Draw minus (-) when displaying remaining time"
+msgstr ""
+
+#: src/audkrellm-options.c:73
+msgid "Configs"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:115
+msgid "/Toggles..."
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:116
+msgid "/Toggles.../Main Window"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:118
+msgid "/Toggles.../Playlist"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:120
+msgid "/Toggles.../EQ"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:122
+msgid "/Toggles.../Repeat"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:124
+msgid "/Toggles.../Shuffle"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:128
+msgid "/Toggles.../-"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:129
+msgid "/Toggles.../Always on top on"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:131
+msgid "/Toggles.../Always on top off"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:136
+msgid "/Audacious.../Previous"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:138
+msgid "/Audacious.../Play"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:140
+msgid "/Audacious.../Pause"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:142
+msgid "/Audacious.../Stop"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:144
+msgid "/Audacious.../Next"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:149 src/audkrellm-popup-menu.c:180
+msgid "/AudKrellM Options"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:154
+msgid "/Open file(s)"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:157
+msgid "/Audacious Prefs"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:163
+msgid "/Quit Audacious"
+msgstr ""
+
+#: src/audkrellm-popup-menu.c:175
+msgid "/Launch Audacious"
+msgstr ""
