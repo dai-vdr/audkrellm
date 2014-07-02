@@ -3,7 +3,7 @@
 
 AC_PREREQ(2.59)
 
-AC_INIT([audkrellm], 0.0.1, [d+audacious@vdr.jp])
+AC_INIT([audkrellm], 0.0.2, [d+audacious@vdr.jp])
 AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION, no-define)
 
 AC_CONFIG_SRCDIR([src/audkrellm.c],
@@ -33,7 +33,7 @@ localedir='${prefix}/share/locale'
 AC_SUBST(localedir)
 
 # pkg-config
-PKG_CHECK_MODULES(GKRELLM, gkrellm >= 2.2.9)
+PKG_CHECK_MODULES(GKRELLM, gkrellm >= 2.2.10)
 AC_SUBST(GKRELLM_CFLAGS)
 AC_SUBST(GKRELLM_LIBS)
 #
@@ -41,7 +41,7 @@ PKG_CHECK_MODULES(AUDACIOUS, audacious >= 1.4.0)
 AC_SUBST(AUDACIOUS_CFLAGS)
 AC_SUBST(AUDACIOUS_LIBS)
 #
-PKG_CHECK_MODULES(DBUS, [dbus-1 >= 1.0.2 dbus-glib-1 >= 0.73])
+PKG_CHECK_MODULES(DBUS, [dbus-1 >= 1.1.1 dbus-glib-1 >= 0.74])
 AC_SUBST(DBUS_CFLAGS)
 AC_SUBST(DBUS_LIBS)
 

@@ -72,11 +72,11 @@ gchar *audkrellm_get_scrolling_title_text( gint *ret_width, gboolean reset ) {
 
     if( time > -1 ) {
       scrolling_text = g_strdup_printf( "%d. %s (%d:%02d)",
-                                        ( position + 1 ), title,
+                                        position, title,
                                         ( time / 1000 / 60 ),
                                         ( time / 1000 % 60 ) );
     } else {
-      scrolling_text = g_strdup_printf( "%d. %s", ( position + 1 ), title );
+      scrolling_text = g_strdup_printf( "%d. %s", position, title );
     }
     width = gkrellm_gdk_string_width( scroll_decal->text_style.font,
                                       scrolling_text );

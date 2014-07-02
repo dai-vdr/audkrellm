@@ -67,15 +67,12 @@ static void toggles_func( GtkWidget *w, gpointer what ) {
   }
 }
 
-#if 0 /* XXX: NOT IMPLEMENTED */
-      /* libaudclient/audctrl.c#audacious_remote_toggle_aot */
 /*
  * taken from gkrellmms-2.1.22/options.c
  */
 static void aot_func( GtkWidget *w, gpointer data ) {
   audacious_remote_toggle_aot( audkrellm_session, GPOINTER_TO_INT( data ) );
 }
-#endif
 
 /*
  * taken from gkrellmms-2.1.22/options.c
@@ -129,14 +126,11 @@ static GtkItemFactoryEntry running_factory_entry[] = {
   { N_( "/Toggles.../Shuffle" ), NULL,
     toggles_func, AUDKRELLM_SHUFFLE, "<Item>" },
 
-#if 0 /* XXX: NOT IMPLEMENTED */
-      /* libaudclient/audctrl.c#audacious_remote_toggle_aot */
   { N_( "/Toggles.../-" ), NULL, NULL, 0, "<Separator>" },
   { N_( "/Toggles.../Always on top on" ), NULL,
     aot_func, ON, "<Item>" },
   { N_( "/Toggles.../Always on top off" ), NULL,
     aot_func, OFF, "<Item>" },
-#endif
 
   { "/Audacious...", NULL, NULL, 0, "<Branch>" },
   { N_( "/Audacious.../Previous" ), NULL,
@@ -159,11 +153,9 @@ static GtkItemFactoryEntry running_factory_entry[] = {
 
   { N_( "/Open file(s)" ), NULL,
     toggles_func, AUDKRELLM_EJECT, "<Item>" },
-#if 0 /* XXX: NOT IMPLEMENTED */
       /* libaudclient/audctrl.c#audacious_remote_show_prefs_box */
   { N_( "/Audacious Prefs" ), NULL,
     toggles_func, AUDKRELLM_PREFS, "<Item>" },
-#endif
 
   { "/-", NULL, NULL, 0, "<Separator>" },
 

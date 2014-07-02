@@ -1,101 +1,23 @@
-------------------------------------------------------------------------
-r52 | dai | 2007-07-21 20:40:20 +0900 (Sat, 21 Jul 2007) | 2 lines
+2007-11-16 dai <d+audacious@vdr.jp>
 
-update po
+	* Release 0.0.2
 
-------------------------------------------------------------------------
-r51 | dai | 2007-07-21 20:36:46 +0900 (Sat, 21 Jul 2007) | 2 lines
+2007-11-15 dai <d+audacious@vdr.jp>
 
-add comment
+	* src/audkrellm-scroll-panel.c: position does not need incr
 
-------------------------------------------------------------------------
-r48 | dai | 2007-07-10 00:55:57 +0900 (Tue, 10 Jul 2007) | 2 lines
+2007-11-08 dai <d+audacious@vdr.jp>
 
-- variable name (add prefix audkrellm_)
+	* src/audkrellm-popup-menu.c: now implemented in libaudclient
+	- audacious_remote_toggle_aot
+	- audacious_remote_show_prefs_box
+	* configure.ac: tighten dependency lib version
 
-------------------------------------------------------------------------
-r47 | dai | 2007-07-09 14:50:49 +0900 (Mon, 09 Jul 2007) | 21 lines
+2007-07-01 dai <d+audacious@vdr.jp>
 
-add always_load_info
-- audkrellm-options.[ch]
-- audkrellm-options-switches.c
+	* src/audkrellm.c: add const to drop_types
+	* src/audkrellm-options-info.c: add const to help_text
 
-new def [LR]_SWITCH
-- audkrellm-options.c
-- audkrellm-options-switches.c
+2007-06-11 dai <d+audacious@vdr.jp>
 
-new file
-- audkrellm-playlist.[ch]
-
-use audkrellm-playlist
-- audkrellm.c
-- audkrellm-tooltip.c
-- audkrellm-scroll-panel.c
-- audkrellm-popup-menu.c
-- audkrellm-control-panel.c
-
-remove useless variables
-- audkrellm-scroll-panel.h
-
-------------------------------------------------------------------------
-r45 | dai | 2007-07-01 23:33:35 +0900 (Sun, 01 Jul 2007) | 3 lines
-
-update ChangeLog
-version 0.0.1
-
-------------------------------------------------------------------------
-r44 | dai | 2007-07-01 23:27:34 +0900 (Sun, 01 Jul 2007) | 2 lines
-
-revert prev changes
-
-------------------------------------------------------------------------
-r43 | dai | 2007-07-01 04:24:03 +0900 (Sun, 01 Jul 2007) | 5 lines
-
-* synthesizing all *.c
-- remove all extern and global
-- AUDKRELLM.c: new file
-* add const to help_text and drop_types
-
-------------------------------------------------------------------------
-r42 | dai | 2007-06-28 12:13:42 +0900 (Thu, 28 Jun 2007) | 2 lines
-
-plug leak
-
-------------------------------------------------------------------------
-r41 | dai | 2007-06-28 11:00:27 +0900 (Thu, 28 Jun 2007) | 2 lines
-
-remove Makefile.in
-
-------------------------------------------------------------------------
-r40 | dai | 2007-06-18 23:45:16 +0900 (Mon, 18 Jun 2007) | 5 lines
-
-        * src/audkrellm-control-panel.c#create_control_panel
-          src/audkrellm-popup-menu.c#open_options_cb
-          src/audkrellm-scroll-panel.c#create_scroll_panel:
-          use audkrellm_get_monitor
-
-------------------------------------------------------------------------
-r39 | dai | 2007-06-16 15:32:15 +0900 (Sat, 16 Jun 2007) | 2 lines
-
-* src/audkrellm.c: (mainwin_back_func) new func.
-
-------------------------------------------------------------------------
-r38 | dai | 2007-06-11 22:57:46 +0900 (Mon, 11 Jun 2007) | 2 lines
-
-update ja.po
-
-------------------------------------------------------------------------
-r37 | dai | 2007-06-11 22:47:26 +0900 (Mon, 11 Jun 2007) | 2 lines
-
-remove rpath
-
-------------------------------------------------------------------------
-r36 | dai | 2007-06-11 22:39:49 +0900 (Mon, 11 Jun 2007) | 2 lines
-
-initial prerelease
-
-------------------------------------------------------------------------
-r35 | dai | 2007-06-11 22:37:20 +0900 (Mon, 11 Jun 2007) | 1 line
-
-initial import
-------------------------------------------------------------------------
+	* Release 0.0.0 (20070611)
