@@ -34,57 +34,57 @@ static GtkWidget *auto_start_toggle,
 /*
  * taken from gkrellmms-2.1.22/options.c#create_gkrellmms_config
  */
-void create_options_toggles( GtkWidget *vbox ) {
-  /* opt_audacious_auto_start */
+void audkrellm_create_options_toggles( GtkWidget *vbox ) {
+  /* audkrellm_opt_auto_start */
   auto_start_toggle = gtk_check_button_new_with_label(
     _( "Auto launch Audacious on AudKrellM startup" ) );
   gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON( auto_start_toggle ),
-                                opt_audacious_auto_start );
+                                audkrellm_opt_auto_start );
   gtk_container_add( GTK_CONTAINER( vbox ), auto_start_toggle );
 
-  /* opt_audacious_auto_main_close */
+  /* audkrellm_opt_auto_main_close */
   auto_main_close_toggle = gtk_check_button_new_with_label(
     _( "Auto close (and open) Audacious Mainwin" ) );
   gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON( auto_main_close_toggle ),
-                                opt_audacious_auto_main_close );
+                                audkrellm_opt_auto_main_close );
   gtk_container_add( GTK_CONTAINER( vbox ), auto_main_close_toggle );
 
-  /* opt_audacious_auto_hide_all */
+  /* audkrellm_opt_auto_hide_all */
   auto_hide_all_toggle = gtk_check_button_new_with_label(
     _( "Auto hide all Audacious windows on Audacious startup" ) );
   gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON( auto_hide_all_toggle ),
-                                opt_audacious_auto_hide_all );
+                                audkrellm_opt_auto_hide_all );
   gtk_container_add( GTK_CONTAINER( vbox ), auto_hide_all_toggle );
 
-  /* opt_audkrellm_scroll_enable */
+  /* audkrellm_opt_scroll_enable */
   scroll_enable_toggle = gtk_check_button_new_with_label(
      _( "Enable scrolling title panel" ) );
   gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON( scroll_enable_toggle ),
-                                opt_audkrellm_scroll_enable );
+                                audkrellm_opt_scroll_enable );
   gtk_container_add( GTK_CONTAINER( vbox ), scroll_enable_toggle );
 
-  /* opt_audkrellm_draw_minus */
+  /* audkrellm_opt_draw_minus */
   draw_minus_toggle = gtk_check_button_new_with_label(
     _( "Draw minus (-) when displaying remaining time" ) );
   gtk_toggle_button_set_active( GTK_TOGGLE_BUTTON( draw_minus_toggle ),
-                                opt_audkrellm_draw_minus );
+                                audkrellm_opt_draw_minus );
   gtk_container_add( GTK_CONTAINER( vbox ), draw_minus_toggle );
 }
 
 /*
  * taken from gkrellmms-2.1.22/options.c#apply_gkrellmms_config
  */
-void apply_options_toggles( void ) {
-  opt_audacious_auto_start
+void audkrellm_apply_options_toggles( void ) {
+  audkrellm_opt_auto_start
     = GTK_TOGGLE_BUTTON( auto_start_toggle )->active;
-  opt_audacious_auto_main_close
+  audkrellm_opt_auto_main_close
     = GTK_TOGGLE_BUTTON( auto_main_close_toggle )->active;
-  opt_audacious_auto_hide_all
+  audkrellm_opt_auto_hide_all
     = GTK_TOGGLE_BUTTON( auto_hide_all_toggle )->active;
 
-  opt_audkrellm_scroll_enable
+  audkrellm_opt_scroll_enable
     = GTK_TOGGLE_BUTTON( scroll_enable_toggle )->active;
-  opt_audkrellm_draw_minus
+  audkrellm_opt_draw_minus
     = GTK_TOGGLE_BUTTON( draw_minus_toggle )->active;
 }
 

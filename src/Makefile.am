@@ -3,6 +3,9 @@ plugin_PROGRAMS = audkrellm.so
 plugindir = $(libdir)/gkrellm2/plugins/
 
 audkrellm_so_SOURCES = audkrellm.c \
+	\
+	audkrellm-playlist.c \
+	\
 	audkrellm-scroll-panel.c \
 	audkrellm-tooltip.c \
 	\

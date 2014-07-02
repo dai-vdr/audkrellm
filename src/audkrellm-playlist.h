@@ -22,10 +22,21 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 */
 
-#ifndef __AUDKRELLM_TOOLTIP_H_INCLUDED__
-#define __AUDKRELLM_TOOLTIP_H_INCLUDED__
+#ifndef __AUDKRELLM_PLAYLIST_H_INCLUDED__
+#define __AUDKRELLM_PLAYLIST_H_INCLUDED__
 
-void audkrellm_create_tooltip( void );
-void audkrellm_update_tooltip( void );
+/* init the playlist */
+void audkrellm_init_playlist( void );
 
-#endif /* __AUDKRELLM_TOOLTIP_H_INCLUDED__ */
+/* check if the playlist is still correct 
+ * returns TRUE when there where changes */ 
+gint audkrellm_update_playlist( void );
+
+/* gets the time/filename/title of the current song 
+ * don't free !  */
+gchar *audkrellm_get_current_file( void );
+gchar *audkrellm_get_current_title( void );
+gint   audkrellm_get_current_time( void );
+gint   audkrellm_get_current_position( void );
+
+#endif /* __AUDKRELLM_PLAYLIST_H_INCLUDED__ */

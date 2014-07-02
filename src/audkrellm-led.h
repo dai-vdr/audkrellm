@@ -24,8 +24,10 @@
 
 #ifndef __AUDKRELLM_LED_H_INCLUDED__
 #define __AUDKRELLM_LED_H_INCLUDED__
-extern GkrellmDecal *led_decal;
 
-void create_led( GkrellmMargin *m );
-void update_led( void );
+extern GkrellmDecal *audkrellm_led_decal;
+
+void audkrellm_create_led( GkrellmMargin *m );
+void audkrellm_update_led( void );
+
 #endif /* __AUDKRELLM_LED_H_INCLUDED__ */

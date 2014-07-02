@@ -27,7 +27,7 @@
 #include "audkrellm-control-panel.h"
 
 #include "audkrellm-led.h"
-GkrellmDecal *led_decal;
+GkrellmDecal *audkrellm_led_decal;
 
 static gint led_off_index     = 0,
             led_running_index = 1,
@@ -37,7 +37,7 @@ static gint led_off_index     = 0,
 /*
  * taken from gkrellmms-2.1.22/gkrellmms.c#update_gkrellmms
  */
-void update_led( void ) {
+void audkrellm_update_led( void ) {
   static gint on_index = 0, off_index = 0, led_status = 0, led_on = FALSE;
 
   /* calculate if led should be on or off */
@@ -50,7 +50,7 @@ void update_led( void ) {
   if( ! audacious_is_running ) {
     on_index  = led_playing_index;
     off_index = led_off_index;
-  } else if( audacious_remote_is_paused( session ) ) {
+  } else if( audacious_remote_is_paused( audkrellm_session ) ) {
     on_index  = led_off_index; /* invert the duty cycle */
     off_index = led_paused_index;
   } else if( ! audacious_is_playing ) {
@@ -61,37 +61,43 @@ void update_led( void ) {
     on_index = led_playing_index;
   }
 
-  gkrellm_draw_decal_pixmap( control_panel, led_decal,
+  gkrellm_draw_decal_pixmap( audkrellm_control_panel, audkrellm_led_decal,
                              led_on ? on_index : off_index );
 }
 
 /*
  * taken from gkrellmms-2.1.22/gkrellmms.c#create_gkrellmms
  */
-void create_led( GkrellmMargin *m ) {
+void audkrellm_create_led( GkrellmMargin *m ) {
   GkrellmPiximage  *led_image = NULL;
 
   if( gkrellm_load_piximage( "led_indicator", NULL,
                              &led_image, GKRELLMMS_STYLE ) ) {
-    led_decal = gkrellm_make_scaled_decal_pixmap( control_panel, led_image,
-                                                  style, 4, 0, -1, 0, 0);
+    audkrellm_led_decal
+      = gkrellm_make_scaled_decal_pixmap( audkrellm_control_panel,
+                                          led_image, audkrellm_style,
+                                          4, 0, -1, 0, 0);
     led_off_index     = 0;
     led_running_index = 1;
     led_paused_index  = 2;
     led_playing_index = 3;
   } else {
-    led_decal = gkrellm_create_decal_pixmap( control_panel,
-                                             gkrellm_decal_misc_pixmap(),
-                                             gkrellm_decal_misc_mask(),
-                                             N_MISC_DECALS, style, 0, -1 );
+    audkrellm_led_decal
+      = gkrellm_create_decal_pixmap( audkrellm_control_panel,
+                                     gkrellm_decal_misc_pixmap(),
+                                     gkrellm_decal_misc_mask(),
+                                     N_MISC_DECALS, audkrellm_style, 0, -1 );
     led_off_index     = D_MISC_LED0;
     led_running_index = D_MISC_LED1;
     led_paused_index  = D_MISC_LED1;
     led_playing_index = D_MISC_LED1;
   }
-  led_decal->x = gkrellm_chart_width() - led_decal->w - m->right;
+  audkrellm_led_decal->x = gkrellm_chart_width()
+                         - audkrellm_led_decal->w
+                         - m->right;
 
-  gkrellm_draw_decal_pixmap( control_panel, led_decal, led_off_index );
+  gkrellm_draw_decal_pixmap( audkrellm_control_panel, audkrellm_led_decal,
+                             led_off_index );
 }
 
 /*

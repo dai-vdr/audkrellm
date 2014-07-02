@@ -3,7 +3,7 @@
 
 AC_PREREQ(2.59)
 
-AC_INIT([audkrellm], 0.0.0, [d+audacious@vdr.jp])
+AC_INIT([audkrellm], 0.0.1, [d+audacious@vdr.jp])
 AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION, no-define)
 
 AC_CONFIG_SRCDIR([src/audkrellm.c],

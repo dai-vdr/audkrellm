@@ -25,16 +25,16 @@
 #ifndef __AUDKRELLM_CONTROL_PANEL_H_INCLUDED__
 #define __AUDKRELLM_CONTROL_PANEL_H_INCLUDED__
 
-extern GkrellmPanel *control_panel;
-extern GkrellmDecal *control_decal;
-extern GkrellmKrell *time_krell;
+extern GkrellmPanel *audkrellm_control_panel;
+extern GkrellmDecal *audkrellm_control_decal;
+extern GkrellmKrell *audkrellm_time_krell;
 
-void update_control_panel( void );
-void create_control_panel( GtkWidget *vbox );
-void set_panel_status( void );
+void audkrellm_update_control_panel( void );
+void audkrellm_create_control_panel( GtkWidget *vbox );
+void audkrellm_set_panel_status( void );
 
-gint panel_button_press( GtkWidget *widget, GdkEventButton *ev, gpointer data );
-gint panel_button_release( GtkWidget *widget, GdkEventButton *ev, gpointer data );
-gint slider_motion( GtkWidget *widget, GdkEventMotion *ev, gpointer data );
+gint audkrellm_panel_button_press( GtkWidget *widget, GdkEventButton *ev, gpointer data );
+gint audkrellm_panel_button_release( GtkWidget *widget, GdkEventButton *ev, gpointer data );
+gint audkrellm_slider_motion( GtkWidget *widget, GdkEventMotion *ev, gpointer data );
 
 #endif /* __AUDKRELLM_CONTROL_PANEL_H_INCLUDED__ */

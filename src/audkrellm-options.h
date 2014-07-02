@@ -25,39 +25,43 @@
 #ifndef __AUDKRELLM_OPTIONS_H__
 #define __AUDKRELLM_OPTIONS_H__
 
-#define   SCROLL_SEPARATOR " ++++ "
-#define   MAXLEN_SCROLL_SEPARATOR 25
+#define SCROLL_SEPARATOR " ++++ "
+#define MAXLEN_SCROLL_SEPARATOR 25
 
-extern gchar    *opt_audacious_exec_command;
-extern gchar    *opt_audkrellm_krell_label;
-extern gchar    *opt_audkrellm_scroll_separator;
+#define L_SWITCH 1
+#define R_SWITCH 0
 
-extern gboolean  opt_audacious_auto_start;
-extern gboolean  opt_audacious_auto_main_close;
-extern gboolean  opt_audacious_auto_hide_all;
+extern gchar    *audkrellm_opt_exec_command;
+extern gchar    *audkrellm_opt_krell_label;
+extern gchar    *audkrellm_opt_scroll_separator;
 
-extern gboolean  opt_audkrellm_scroll_enable;
-extern gboolean  opt_audkrellm_draw_minus;
+extern gboolean  audkrellm_opt_auto_start;
+extern gboolean  audkrellm_opt_auto_main_close;
+extern gboolean  audkrellm_opt_auto_hide_all;
 
-extern gint      opt_audkrellm_draw_in_time_bar;
-extern gint      opt_audkrellm_krell_mmb_pause;
-extern gint      opt_audkrellm_time_format;
+extern gboolean  audkrellm_opt_scroll_enable;
+extern gboolean  audkrellm_opt_draw_minus;
 
-extern gboolean  opt_theme_show_button_bar;
+extern gint      audkrellm_opt_draw_in_time_bar;
+extern gint      audkrellm_opt_krell_mmb_pause;
+extern gint      audkrellm_opt_time_format;
+extern gint      audkrellm_opt_always_load_info;
 
-void create_audkrellm_config( GtkWidget *tab );
-void create_options_entries( GtkWidget *vbox );
-void create_options_toggles( GtkWidget *vbox );
-void create_options_switches( GtkWidget *vbox );
-void create_options_info( GtkWidget *notebook );
+extern gboolean  audkrellm_opt_theme_show_button_bar;
 
-void apply_audkrellm_config( void );
-void apply_options_configs( void );
-void apply_options_toggles( void );
-void apply_options_switches( void );
+void audkrellm_create_config( GtkWidget *tab );
+void audkrellm_create_options_entries( GtkWidget *vbox );
+void audkrellm_create_options_toggles( GtkWidget *vbox );
+void audkrellm_create_options_switches( GtkWidget *vbox );
+void audkrellm_create_options_info( GtkWidget *notebook );
 
-void save_audkrellm_config( FILE *f );
-void load_audkrellm_config( gchar *arg );
-void set_audkrellm_default_config( void );
+void audkrellm_apply_config( void );
+void audkrellm_apply_options_entries( void );
+void audkrellm_apply_options_toggles( void );
+void audkrellm_apply_options_switches( void );
+
+void audkrellm_save_config( FILE *f );
+void audkrellm_load_config( gchar *arg );
+void audkrellm_set_default_config( void );
 
 #endif /* __AUDKRELLM_OPTIONS_H__ */

@@ -28,12 +28,12 @@
 /*
  * taken from gkrellmms-2.1.22/options.c#create_gkrellmms_config
  */
-void create_options_info( GtkWidget *notebook ) {
+void audkrellm_create_options_info( GtkWidget *notebook ) {
   GtkWidget *vbox, *text, *label, *about_label;
   gchar *about_text = NULL;
   gint i;
 
-  gchar *help_text[] = {
+  const static gchar *help_text[] = {
 
   N_( "AudKrellM is a GKrellM Audacious-plugin which allows you to control\n"
       "Audacious from within GKrellM. It features some cool things, such as:\n" ),

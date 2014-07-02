@@ -7,27 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audkrellm 0.0.0\n"
 "Report-Msgid-Bugs-To: d+audacious@vdr.jp\n"
-"POT-Creation-Date: 2007-06-11 22:08+0900\n"
-"PO-Revision-Date: 2007-06-11 22:57+0900\n"
+"POT-Creation-Date: 2007-07-21 20:38+0900\n"
+"PO-Revision-Date: 2007-07-21 20:39+0900\n"
 "Last-Translator: dai <d+po@vdr.jp>\n"
 "Language-Team: ja <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/audkrellm.c:87 src/audkrellm.c:96
+#: src/audkrellm.c:91 src/audkrellm.c:100
 msgid "AudKrellM Error"
 msgstr "AudKrellM エラー"
 
-#: src/audkrellm-options-entries.c:42
+#: src/audkrellm-options-entries.c:43
 msgid "Audacious Executable:"
 msgstr "Audacious 実行ファイル:"
 
-#: src/audkrellm-options-entries.c:54
+#: src/audkrellm-options-entries.c:55
 msgid "Krell label:"
 msgstr "Krell ラベル:"
 
-#: src/audkrellm-options-entries.c:64
+#: src/audkrellm-options-entries.c:65
 msgid "Scroll separator:"
 msgstr "スクロールセパレータ:"
 
@@ -299,41 +299,53 @@ msgstr ""
 msgid "About"
 msgstr "AudKrellM について"
 
-#: src/audkrellm-options-switches.c:68
+#: src/audkrellm-options-switches.c:78
 msgid "Draw in time bar:"
 msgstr "時間バーへの表示:"
 
-#: src/audkrellm-options-switches.c:75
+#: src/audkrellm-options-switches.c:85
 msgid "Output time"
 msgstr "演奏時間"
 
-#: src/audkrellm-options-switches.c:89
+#: src/audkrellm-options-switches.c:99
 msgid "Audacious-text"
 msgstr "Audacious テキスト"
 
-#: src/audkrellm-options-switches.c:99
+#: src/audkrellm-options-switches.c:109
 msgid "Middle mouse click on krell will:"
 msgstr "Krell でのマウス中ボタンクリック:"
 
-#: src/audkrellm-options-switches.c:106
+#: src/audkrellm-options-switches.c:116
 msgid "Pause/Continue song"
 msgstr "曲を一時停止/再開"
 
-#: src/audkrellm-options-switches.c:120
+#: src/audkrellm-options-switches.c:130
 msgid "Stop/Play song"
 msgstr "曲を停止/演奏"
 
-#: src/audkrellm-options-switches.c:130
+#: src/audkrellm-options-switches.c:140
 msgid "Output time format:"
 msgstr "表示する時間のフォーマット:"
 
-#: src/audkrellm-options-switches.c:137
+#: src/audkrellm-options-switches.c:147
 msgid "Elapsed time"
 msgstr "経過時間"
 
-#: src/audkrellm-options-switches.c:151
+#: src/audkrellm-options-switches.c:161
 msgid "Remaining time"
 msgstr "残り時間"
+
+#: src/audkrellm-options-switches.c:171
+msgid "load info:"
+msgstr "情報の読み込み:"
+
+#: src/audkrellm-options-switches.c:179
+msgid "Always"
+msgstr "常に"
+
+#: src/audkrellm-options-switches.c:193
+msgid "On File play only"
+msgstr "ファイル演奏時のみ"
 
 #: src/audkrellm-options-toggles.c:40
 msgid "Auto launch Audacious on AudKrellM startup"
@@ -355,82 +367,82 @@ msgstr "曲名のスクロール"
 msgid "Draw minus (-) when displaying remaining time"
 msgstr "残り時間をマイナス (-) をつけて表示"
 
-#: src/audkrellm-options.c:73
+#: src/audkrellm-options.c:74
 msgid "Configs"
 msgstr "設定"
 
-#: src/audkrellm-popup-menu.c:115
+#: src/audkrellm-popup-menu.c:120
 msgid "/Toggles..."
 msgstr "/トグル..."
 
-#: src/audkrellm-popup-menu.c:116
+#: src/audkrellm-popup-menu.c:121
 msgid "/Toggles.../Main Window"
 msgstr "/トグル.../メインウィンドウ"
 
-#: src/audkrellm-popup-menu.c:118
+#: src/audkrellm-popup-menu.c:123
 msgid "/Toggles.../Playlist"
 msgstr "/トグル.../プレイリスト"
 
-#: src/audkrellm-popup-menu.c:120
+#: src/audkrellm-popup-menu.c:125
 msgid "/Toggles.../EQ"
 msgstr "/トグル.../イコライザ"
 
-#: src/audkrellm-popup-menu.c:122
+#: src/audkrellm-popup-menu.c:127
 msgid "/Toggles.../Repeat"
 msgstr "/トグル.../リピート"
 
-#: src/audkrellm-popup-menu.c:124
+#: src/audkrellm-popup-menu.c:129
 msgid "/Toggles.../Shuffle"
 msgstr "/トグル.../シャッフル"
 
-#: src/audkrellm-popup-menu.c:128
+#: src/audkrellm-popup-menu.c:134
 msgid "/Toggles.../-"
 msgstr "/トグル.../-"
 
-#: src/audkrellm-popup-menu.c:129
+#: src/audkrellm-popup-menu.c:135
 msgid "/Toggles.../Always on top on"
 msgstr "/トグル.../常に最前面に配置を有効"
 
-#: src/audkrellm-popup-menu.c:131
+#: src/audkrellm-popup-menu.c:137
 msgid "/Toggles.../Always on top off"
 msgstr "/トグル.../常に最前面に配置を無効"
 
-#: src/audkrellm-popup-menu.c:136
+#: src/audkrellm-popup-menu.c:142
 msgid "/Audacious.../Previous"
 msgstr "/Audacious.../前の曲"
 
-#: src/audkrellm-popup-menu.c:138
+#: src/audkrellm-popup-menu.c:144
 msgid "/Audacious.../Play"
 msgstr "/Audacious.../演奏"
 
-#: src/audkrellm-popup-menu.c:140
+#: src/audkrellm-popup-menu.c:146
 msgid "/Audacious.../Pause"
 msgstr "/Audacious.../一時停止"
 
-#: src/audkrellm-popup-menu.c:142
+#: src/audkrellm-popup-menu.c:148
 msgid "/Audacious.../Stop"
 msgstr "/Audacious.../停止"
 
-#: src/audkrellm-popup-menu.c:144
+#: src/audkrellm-popup-menu.c:150
 msgid "/Audacious.../Next"
 msgstr "/Audacious.../次の曲"
 
-#: src/audkrellm-popup-menu.c:149 src/audkrellm-popup-menu.c:180
+#: src/audkrellm-popup-menu.c:155 src/audkrellm-popup-menu.c:187
 msgid "/AudKrellM Options"
 msgstr "/AudKrellM オプション"
 
-#: src/audkrellm-popup-menu.c:154
+#: src/audkrellm-popup-menu.c:160
 msgid "/Open file(s)"
 msgstr "/ファイルを演奏"
 
-#: src/audkrellm-popup-menu.c:157
+#: src/audkrellm-popup-menu.c:164
 msgid "/Audacious Prefs"
 msgstr "/Audacious の設定"
 
-#: src/audkrellm-popup-menu.c:163
+#: src/audkrellm-popup-menu.c:170
 msgid "/Quit Audacious"
 msgstr "/Audacious を終了"
 
-#: src/audkrellm-popup-menu.c:175
+#: src/audkrellm-popup-menu.c:182
 msgid "/Launch Audacious"
 msgstr "/Audacious の起動"

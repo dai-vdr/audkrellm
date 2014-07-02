@@ -53,9 +53,9 @@ static gboolean gkrellmrc_button_placement;
 static void cb_control_button( GkrellmDecalbutton *button ) {
   gint control_id = GPOINTER_TO_INT( button->data );
   if( ! audacious_is_running && control_id == AUDKRELLM_PLAY ) {
-    audacious_start_func();
+    audkrellm_start_audacious();
   } else {
-    do_audacious_command( control_id );
+    audkrellm_do_audacious_command( control_id );
   }
 }
 
@@ -175,14 +175,14 @@ static void decal_position( GkrellmDecal *decal, gchar *name, gboolean text ) {
     x = set_x_position( x, anchor );
     y = y * gkrellm_get_theme_scale();
 
-    gkrellm_move_decal( control_panel, decal, x, y );
+    gkrellm_move_decal( audkrellm_control_panel, decal, x, y );
   }
 }
 
 /*
  * taken from gkrellmms-2.1.22/gkrellmms.c
  */
-static void layout_control_panel( GkrellmStyle *style, gint yoff ) {
+static void layout_control_panel( GkrellmStyle *lc_style, gint yoff ) {
   prev_button.y = play_button.y  = stop_button.y = yoff;
   next_button.y = eject_button.y = yoff;
 
@@ -194,8 +194,10 @@ static void layout_control_panel( GkrellmStyle *style, gint yoff ) {
   button_position( &next_button,  GKRELLMMS_STYLE"_next_button_position"  );
   button_position( &eject_button, GKRELLMMS_STYLE"_eject_button_position" );
 
-  decal_position( control_decal,  GKRELLMMS_STYLE"_label_position", TRUE  );
-  decal_position( led_decal,      GKRELLMMS_STYLE"_led_position",   FALSE );
+  decal_position( audkrellm_control_decal,
+                  GKRELLMMS_STYLE"_label_position", TRUE  );
+  decal_position( audkrellm_led_decal,
+                  GKRELLMMS_STYLE"_led_position",   FALSE );
 }
 
 /*
@@ -253,15 +255,15 @@ static void move_buttons( void ) {
     next_button.x  = stop_button.x + stop_button.w;
     eject_button.x = next_button.x + next_button.w;
   }
-  gkrellm_move_decal( control_panel,  prev_button.button->decal,
+  gkrellm_move_decal( audkrellm_control_panel,  prev_button.button->decal,
                       prev_button.x,  prev_button.y  );
-  gkrellm_move_decal( control_panel,  play_button.button->decal,
+  gkrellm_move_decal( audkrellm_control_panel,  play_button.button->decal,
                       play_button.x,  play_button.y  );
-  gkrellm_move_decal( control_panel,  stop_button.button->decal,
+  gkrellm_move_decal( audkrellm_control_panel,  stop_button.button->decal,
                       stop_button.x,  stop_button.y  );
-  gkrellm_move_decal( control_panel,  next_button.button->decal,
+  gkrellm_move_decal( audkrellm_control_panel,  next_button.button->decal,
                       next_button.x,  next_button.y  );
-  gkrellm_move_decal( control_panel,  eject_button.button->decal,
+  gkrellm_move_decal( audkrellm_control_panel,  eject_button.button->decal,
                       eject_button.x, eject_button.y );
 }
 
@@ -269,7 +271,7 @@ static void move_buttons( void ) {
  * taken from gkrellmms-2.1.22/gkrellmms.c
  */
 static void make_button( ControlButton *cbut, gint fn_id ) {
-  cbut->button = gkrellm_make_scaled_button( control_panel, cbut->image,
+  cbut->button = gkrellm_make_scaled_button( audkrellm_control_panel, cbut->image,
                    cb_control_button, GINT_TO_POINTER( fn_id ),
                    FALSE, FALSE, 2, 0, 1, cbut->x, cbut->y, cbut->w, cbut->h );
 
@@ -293,16 +295,16 @@ static void make_button( ControlButton *cbut, gint fn_id ) {
 /*
  * taken from gkrellmms-2.1.22/gkrellmms.c#create_gkrellmms
  */
-void create_button_bar( void ) {
+void audkrellm_create_button_bar( void ) {
   gint y = 0, y1;
 
   load_button_images();
-  y  = control_decal->y + control_decal->h;
-  y1 = time_krell->y0   + time_krell->h_frame;
+  y  = audkrellm_control_decal->y + audkrellm_control_decal->h;
+  y1 = audkrellm_time_krell->y0   + audkrellm_time_krell->h_frame;
   if( y1 > y ) {
     y = y1;
   }
-  layout_control_panel( style, y + 3 );
+  layout_control_panel( audkrellm_style, y + 3 );
 
   make_button( &prev_button,  AUDKRELLM_PREV  );
   make_button( &play_button,  AUDKRELLM_PLAY  );
@@ -315,7 +317,7 @@ void create_button_bar( void ) {
 /*
  * taken from gkrellmms-2.1.22/gkrellmms.c#set_panel_status
  */
-void set_button_status( void ) {
+void audkrellm_set_button_status( void ) {
   gkrellm_set_button_sensitive( prev_button.button,  audacious_is_running );
   gkrellm_set_button_sensitive( stop_button.button,  audacious_is_running );
   gkrellm_set_button_sensitive( next_button.button,  audacious_is_running );

@@ -32,7 +32,7 @@ typedef struct {
   double x_scale,y_scale;
 } ControlButton;
 
-void create_button_bar( void );
-void set_button_status( void );
+void audkrellm_create_button_bar( void );
+void audkrellm_set_button_status( void );
 
 #endif /* __AUDKRELLM_BUTTON_BAR_H_INCLUDED__ */

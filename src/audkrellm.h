@@ -36,7 +36,7 @@
 #undef  PACKAGE
 #define PACKAGE         "audkrellm"
 #define CONFIG_KEYWORD  PACKAGE
-#define DEFAULT_STYLE   style_id
+#define DEFAULT_STYLE   audkrellm_style_id
 #define GKRELLMMS_STYLE "gkrellmms" /* it is GKrellM's internal style name */
 #define AUDKRELLM_STYLE DEFAULT_STYLE
 #define AUDKRELLM_PLACE (MON_APM | GRAVITY(8))
@@ -56,18 +56,20 @@
 #define AUDKRELLM_AOT      12
 #define AUDKRELLM_PREFS    13
 
-extern GkrellmStyle   *style;
-extern gint            style_id;
-extern GkrellmMonitor *monitor;
-extern GkrellmTicks   *pGK;
+extern GkrellmStyle *audkrellm_style;
+extern gint          audkrellm_style_id;
 
 #include <audacious/dbus.h>
 #include <audacious/audctrl.h>
-extern DBusGProxy *session;
-extern gboolean    audacious_is_running;
-extern gboolean    audacious_is_playing;
+extern DBusGProxy *audkrellm_session;
+extern gboolean    audkrellm_is_running;
+extern gboolean    audkrellm_is_playing;
+#define audacious_is_running audkrellm_is_running
+#define audacious_is_playing audkrellm_is_playing
 
-void audacious_start_func( void );
-void do_audacious_command( gint i );
+GkrellmMonitor *audkrellm_get_monitor( void );
+
+void audkrellm_start_audacious( void );
+void audkrellm_do_audacious_command( gint i );
 
 #endif /* __AUDKRELLM_H_INCLUDED__ */

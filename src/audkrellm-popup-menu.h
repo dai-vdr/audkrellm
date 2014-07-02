@@ -28,12 +28,8 @@
 #define RUNNING     1
 #define NOT_RUNNING 0
 
-extern GtkItemFactory *running_item_factory;
-extern GtkItemFactory *not_running_item_factory;
-
-GtkItemFactory *create_options_menu_factory( gint run_menu );
-
-void options_menu( GdkEventButton *ev );
+void audkrellm_options_menu( GdkEventButton *ev );
+void audkrellm_init_popup_menu( void );
 
 #endif /* __AUDACIOUS_POPUP_MENU_H_INCLUDED__ */
 

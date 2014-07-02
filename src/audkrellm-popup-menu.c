@@ -23,11 +23,12 @@
 */
 
 #include "audkrellm.h"
+#include "audkrellm-playlist.h"
 #include "audkrellm-options.h"
 
 #include "audkrellm-popup-menu.h"
-GtkItemFactory *running_item_factory;
-GtkItemFactory *not_running_item_factory;
+static GtkItemFactory *running_item_factory;
+static GtkItemFactory *not_running_item_factory;
 
 /*
  * taken from gkrellmms-2.1.22/options.c
@@ -37,47 +38,50 @@ static void toggles_func( GtkWidget *w, gpointer what ) {
 
   switch ( type ) {
     case AUDKRELLM_MAINWIN:
-      audacious_remote_main_win_toggle( session,
-        ! audacious_remote_is_main_win( session ) );
+      audacious_remote_main_win_toggle( audkrellm_session,
+        ! audacious_remote_is_main_win( audkrellm_session ) );
       break;
     case AUDKRELLM_PLAYLIST:
-      audacious_remote_pl_win_toggle( session,
-        ! audacious_remote_is_pl_win( session ) );
+      audacious_remote_pl_win_toggle( audkrellm_session,
+        ! audacious_remote_is_pl_win( audkrellm_session ) );
       break;
     case AUDKRELLM_EQ:
-      audacious_remote_eq_win_toggle( session,
-        ! audacious_remote_is_eq_win( session ) );
+      audacious_remote_eq_win_toggle( audkrellm_session,
+        ! audacious_remote_is_eq_win( audkrellm_session ) );
       break;
     case AUDKRELLM_REPEAT:
-      audacious_remote_toggle_repeat( session );
+      audacious_remote_toggle_repeat( audkrellm_session );
       break;
     case AUDKRELLM_SHUFFLE:
-      audacious_remote_toggle_shuffle( session );
+      audacious_remote_toggle_shuffle( audkrellm_session );
       break;
     case AUDKRELLM_EJECT:
-      audacious_remote_eject( session );
+      audacious_remote_eject( audkrellm_session );
       break;
     case AUDKRELLM_PREFS:
-      audacious_remote_show_prefs_box( session );
+      audacious_remote_show_prefs_box( audkrellm_session );
       break;
     default:
-      do_audacious_command( type );
+      audkrellm_do_audacious_command( type );
       break;
   }
 }
 
+#if 0 /* XXX: NOT IMPLEMENTED */
+      /* libaudclient/audctrl.c#audacious_remote_toggle_aot */
 /*
  * taken from gkrellmms-2.1.22/options.c
  */
 static void aot_func( GtkWidget *w, gpointer data ) {
-  audacious_remote_toggle_aot( session, GPOINTER_TO_INT( data ) );
+  audacious_remote_toggle_aot( audkrellm_session, GPOINTER_TO_INT( data ) );
 }
+#endif
 
 /*
  * taken from gkrellmms-2.1.22/options.c
  */
 static void open_options_cb( GtkWidget *widget, gpointer data ) {
-  gkrellm_open_config_window( monitor );
+  gkrellm_open_config_window( audkrellm_get_monitor() );
 }
 
 /*
@@ -90,20 +94,21 @@ static void quit_func( GtkWidget *w, gpointer data ) {
   time( &lt );
   timer = lt;
 
-  audacious_remote_quit( session );
+  audacious_remote_quit( audkrellm_session );
 
-  while( audacious_remote_is_running( session ) &&
+  while( audacious_remote_is_running( audkrellm_session ) &&
          ( ( time( &lt ) - timer ) < 10 ) )  {
     /* Do nothing; wait until xmms really quits, but not longer than 10sec! */
     usleep( 0 );
   }
+  audkrellm_update_playlist();
 }
 
 /*
  * taken from gkrellmms-2.1.22/options.c
  */
 static void start_func( GtkWidget *w, gpointer data ) {
-  audacious_start_func();
+  audkrellm_start_audacious();
 }
 
 /*
@@ -125,6 +130,7 @@ static GtkItemFactoryEntry running_factory_entry[] = {
     toggles_func, AUDKRELLM_SHUFFLE, "<Item>" },
 
 #if 0 /* XXX: NOT IMPLEMENTED */
+      /* libaudclient/audctrl.c#audacious_remote_toggle_aot */
   { N_( "/Toggles.../-" ), NULL, NULL, 0, "<Separator>" },
   { N_( "/Toggles.../Always on top on" ), NULL,
     aot_func, ON, "<Item>" },
@@ -154,6 +160,7 @@ static GtkItemFactoryEntry running_factory_entry[] = {
   { N_( "/Open file(s)" ), NULL,
     toggles_func, AUDKRELLM_EJECT, "<Item>" },
 #if 0 /* XXX: NOT IMPLEMENTED */
+      /* libaudclient/audctrl.c#audacious_remote_show_prefs_box */
   { N_( "/Audacious Prefs" ), NULL,
     toggles_func, AUDKRELLM_PREFS, "<Item>" },
 #endif
@@ -218,13 +225,21 @@ GtkItemFactory *create_options_menu_factory( gint run_menu ) {
 }
 
 /*
- * taken from gkrellmms-2.1.22/options.c
+ * taken from gkrellmms-2.1.22/options.c#options_menu
  */
-void options_menu( GdkEventButton *ev ) {
+void audkrellm_options_menu( GdkEventButton *ev ) {
   gtk_menu_popup( GTK_MENU( audacious_is_running ?
                             running_item_factory->widget : 
                             not_running_item_factory->widget ),
                   NULL, NULL, NULL, NULL, ev->button, ev->time );
+}
+
+/*
+ * taken from gkrellmms-2.1.22/gkrellmms.c#gkrellm_init_plugin
+ */
+void audkrellm_init_popup_menu( void ) {
+  running_item_factory     = create_options_menu_factory( RUNNING     );
+  not_running_item_factory = create_options_menu_factory( NOT_RUNNING );
 }
 
 /*
