@@ -21,5 +21,5 @@ audkrellm_so_SOURCES = audkrellm.c \
 	audkrellm-options-switches.c \
 	audkrellm-options-info.c
 
-AM_CFLAGS = -Wall -fPIC @GKRELLM_CFLAGS@ @AUDACIOUS_CFLAGS@ @DBUS_CFLAGS@
-AM_LDFLAGS = -Wl,-export-dynamic -shared @GKRELLM_LIBS@ @AUDACIOUS_LIBS@ @DBUS_LIBS@
+AM_CFLAGS = -fPIC @GKRELLM_CFLAGS@ @AUDACIOUS_CFLAGS@ @AUDCLIENT_CFLAGS@ @DBUS_CFLAGS@
+AM_LDFLAGS = -Wl -shared @GKRELLM_LIBS@ @AUDACIOUS_LIBS@ @AUDCLIENT_LIBS@ @DBUS_LIBS@

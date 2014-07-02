@@ -1,7 +1,7 @@
 /*
   AudKrellM: GKrellM Audacious Plugin
 
-  Copyright (C) 2007 dai <d+audacious@vdr.jp>
+  Copyright (C) 2007-2011 dai <d+audacious@vdr.jp>
   All rights reserved.
 
   Based on: GKrellMMS 2.1.22: GKrellM XMMS Plugin
@@ -261,6 +261,12 @@ void create_audkrellm( GtkWidget *vbox, gint first_create ) {
     g_signal_connect( G_OBJECT( audkrellm_control_panel->drawing_area ),
                       "motion_notify_event",
                       G_CALLBACK( audkrellm_slider_motion ), NULL );
+
+    g_object_set( G_OBJECT( audkrellm_scroll_panel->drawing_area ),
+                  "has-tooltip", TRUE, NULL );
+    g_signal_connect( G_OBJECT( audkrellm_scroll_panel->drawing_area ),
+                      "query-tooltip",
+                      G_CALLBACK( audkrellm_get_tooltip_cb ), NULL );
 
     gtk_drag_dest_set( vbox, GTK_DEST_DEFAULT_ALL,
                        drop_types, NUM_DROP_TYPES, GDK_ACTION_COPY );

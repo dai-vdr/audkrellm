@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audkrellm 0.0.0\n"
 "Report-Msgid-Bugs-To: d+audacious@vdr.jp\n"
-"POT-Creation-Date: 2007-07-21 20:38+0900\n"
+"POT-Creation-Date: 2011-03-20 12:59+0900\n"
 "PO-Revision-Date: 2007-07-21 20:39+0900\n"
 "Last-Translator: dai <d+po@vdr.jp>\n"
 "Language-Team: ja <ja@li.org>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -371,78 +372,78 @@ msgstr "残り時間をマイナス (-) をつけて表示"
 msgid "Configs"
 msgstr "設定"
 
-#: src/audkrellm-popup-menu.c:120
+#: src/audkrellm-popup-menu.c:117
 msgid "/Toggles..."
 msgstr "/トグル..."
 
-#: src/audkrellm-popup-menu.c:121
+#: src/audkrellm-popup-menu.c:118
 msgid "/Toggles.../Main Window"
 msgstr "/トグル.../メインウィンドウ"
 
-#: src/audkrellm-popup-menu.c:123
+#: src/audkrellm-popup-menu.c:120
 msgid "/Toggles.../Playlist"
 msgstr "/トグル.../プレイリスト"
 
-#: src/audkrellm-popup-menu.c:125
+#: src/audkrellm-popup-menu.c:122
 msgid "/Toggles.../EQ"
 msgstr "/トグル.../イコライザ"
 
-#: src/audkrellm-popup-menu.c:127
+#: src/audkrellm-popup-menu.c:124
 msgid "/Toggles.../Repeat"
 msgstr "/トグル.../リピート"
 
-#: src/audkrellm-popup-menu.c:129
+#: src/audkrellm-popup-menu.c:126
 msgid "/Toggles.../Shuffle"
 msgstr "/トグル.../シャッフル"
 
-#: src/audkrellm-popup-menu.c:134
+#: src/audkrellm-popup-menu.c:129
 msgid "/Toggles.../-"
 msgstr "/トグル.../-"
 
-#: src/audkrellm-popup-menu.c:135
+#: src/audkrellm-popup-menu.c:130
 msgid "/Toggles.../Always on top on"
 msgstr "/トグル.../常に最前面に配置を有効"
 
-#: src/audkrellm-popup-menu.c:137
+#: src/audkrellm-popup-menu.c:132
 msgid "/Toggles.../Always on top off"
 msgstr "/トグル.../常に最前面に配置を無効"
 
-#: src/audkrellm-popup-menu.c:142
+#: src/audkrellm-popup-menu.c:136
 msgid "/Audacious.../Previous"
 msgstr "/Audacious.../前の曲"
 
-#: src/audkrellm-popup-menu.c:144
+#: src/audkrellm-popup-menu.c:138
 msgid "/Audacious.../Play"
 msgstr "/Audacious.../演奏"
 
-#: src/audkrellm-popup-menu.c:146
+#: src/audkrellm-popup-menu.c:140
 msgid "/Audacious.../Pause"
 msgstr "/Audacious.../一時停止"
 
-#: src/audkrellm-popup-menu.c:148
+#: src/audkrellm-popup-menu.c:142
 msgid "/Audacious.../Stop"
 msgstr "/Audacious.../停止"
 
-#: src/audkrellm-popup-menu.c:150
+#: src/audkrellm-popup-menu.c:144
 msgid "/Audacious.../Next"
 msgstr "/Audacious.../次の曲"
 
-#: src/audkrellm-popup-menu.c:155 src/audkrellm-popup-menu.c:187
+#: src/audkrellm-popup-menu.c:149 src/audkrellm-popup-menu.c:179
 msgid "/AudKrellM Options"
 msgstr "/AudKrellM オプション"
 
-#: src/audkrellm-popup-menu.c:160
+#: src/audkrellm-popup-menu.c:154
 msgid "/Open file(s)"
 msgstr "/ファイルを演奏"
 
-#: src/audkrellm-popup-menu.c:164
+#: src/audkrellm-popup-menu.c:157
 msgid "/Audacious Prefs"
 msgstr "/Audacious の設定"
 
-#: src/audkrellm-popup-menu.c:170
+#: src/audkrellm-popup-menu.c:162
 msgid "/Quit Audacious"
 msgstr "/Audacious を終了"
 
-#: src/audkrellm-popup-menu.c:182
+#: src/audkrellm-popup-menu.c:174
 msgid "/Launch Audacious"
 msgstr "/Audacious の起動"

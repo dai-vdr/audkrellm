@@ -1,7 +1,7 @@
 /*
   AudKrellM: GKrellM Audacious Plugin
 
-  Copyright (C) 2007 dai <d+audacious@vdr.jp>
+  Copyright (C) 2007-2011 dai <d+audacious@vdr.jp>
   All rights reserved.
 
   Based on: GKrellMMS: GKrellM XMMS Plugin
@@ -25,7 +25,6 @@
 #ifndef __AUDKRELLM_TOOLTIP_H_INCLUDED__
 #define __AUDKRELLM_TOOLTIP_H_INCLUDED__
 
-void audkrellm_create_tooltip( void );
-void audkrellm_update_tooltip( void );
+gboolean audkrellm_get_tooltip_cb( GtkWidget *widget, gint x, gint y, gboolean keyboard_mode, GtkTooltip *tooltip );
 
 #endif /* __AUDKRELLM_TOOLTIP_H_INCLUDED__ */

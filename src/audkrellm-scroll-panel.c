@@ -1,7 +1,7 @@
 /*
   AudKrellM: GKrellM Audacious Plugin
 
-  Copyright (C) 2007 dai <d+audacious@vdr.jp>
+  Copyright (C) 2007-2011 dai <d+audacious@vdr.jp>
   All rights reserved.
 
   Based on: GKrellMMS: GKrellM XMMS Plugin
@@ -105,8 +105,6 @@ void audkrellm_update_scroll_panel( void ) {
   audkrellm_scrolling_title_text = audkrellm_get_scrolling_title_text( &len,
                                                                        FALSE );
 
-  audkrellm_update_tooltip();
-
   /* gkrellm >= 2.2.0 has a scroll text decal which minimizes slow
   |  Pango renders as the decal text is scrolled (offset is changed).
   */
@@ -176,8 +174,6 @@ void audkrellm_create_scroll_panel( GtkWidget *vbox ) {
                            audkrellm_scroll_style );
   gkrellm_panel_create( vbox, audkrellm_get_monitor(),
                         audkrellm_scroll_panel );
-
-  audkrellm_create_tooltip();
 }
 
 /*

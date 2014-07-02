@@ -1,3 +1,11 @@
+2011-03-20 dai <d+audacious@vdr.jp>
+
+	* Release 0.2.0
+	* src/audkrellm.c
+	  src/audkrellm-scroll-panel.c
+	  src/audkrellm-tooltip.c
+	  src/audkrellm-tooltip.h: replace GtkTooltips with GtkTooltip
+
 2007-11-16 dai <d+audacious@vdr.jp>
 
 	* Release 0.0.2

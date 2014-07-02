@@ -1,7 +1,7 @@
 /*
   AudKrellM: GKrellM Audacious Plugin
 
-  Copyright (C) 2007 dai <d+audacious@vdr.jp>
+  Copyright (C) 2007-2011 dai <d+audacious@vdr.jp>
   All rights reserved.
 
   Based on: GKrellMMS: GKrellM XMMS Plugin
@@ -28,36 +28,20 @@
 
 #include "audkrellm-tooltip.h"
 
-static GtkTooltips *scrolling_tooltip = NULL;
-static gchar *tooltip_text;
-
 /*
- * taken from gkrellmms-2.1.22/gkrellmms.c#update_gkrellmms
+ * taken from xfce4-weather-plugin-0.7.3/panel-plugin/weather.c
  */
-void audkrellm_create_tooltip( void ) {
-  if( scrolling_tooltip == NULL ) {
-    scrolling_tooltip = gtk_tooltips_new();
-    tooltip_text = g_strdup( "Audacious" );
-    gtk_tooltips_set_tip( scrolling_tooltip,
-                          audkrellm_scroll_panel->drawing_area,
-                          tooltip_text, NULL );
-    gtk_tooltips_set_delay( scrolling_tooltip, 750 );
-  }
-}
-
-/*
- * taken from gkrellmms-2.1.22/gkrellmms.c#update_gkrellmms
- */
-void audkrellm_update_tooltip( void ) {
-  gchar *prev_tooltip_text;
+gboolean audkrellm_get_tooltip_cb( GtkWidget *widget,
+                                   gint x, gint y,
+                                   gboolean keyboard_mode,
+                                   GtkTooltip *tooltip ) {
+  gchar *tooltip_text;
   gchar *tooltip_utf8 = NULL, *tooltip_locale = NULL;
   gint   rate = -1, freq = -1, nch = -1;
   gint   time;
 
-  if( scrolling_tooltip != NULL ) {
+  if( tooltip != NULL ) {
     time = audkrellm_get_current_time();
-
-    prev_tooltip_text = tooltip_text;
 
     audacious_remote_get_info( audkrellm_session, &rate, &freq, &nch );
 
@@ -68,17 +52,15 @@ void audkrellm_update_tooltip( void ) {
                                      freq,
                                      ( nch  ==  1 ) ? "mono" : "stereo" );
 
-    if( ! strcmp( prev_tooltip_text, tooltip_text ) ) {
-      gkrellm_locale_dup_string( &tooltip_utf8, tooltip_text, &tooltip_locale );
-      gtk_tooltips_set_tip( scrolling_tooltip,
-                            audkrellm_scroll_panel->drawing_area,
-                            tooltip_utf8, NULL );
-      g_free( tooltip_utf8 );
-      g_free( tooltip_locale );
-    }
-
-    g_free( prev_tooltip_text );
+    gkrellm_locale_dup_string( &tooltip_utf8, tooltip_text, &tooltip_locale );
+    gtk_tooltip_set_text( tooltip, tooltip_utf8 );
+    g_free( tooltip_utf8 );
+    g_free( tooltip_locale );
+  } else {
+    gtk_tooltip_set_text( tooltip, "Audacious" );
   }
+
+  return TRUE;
 }
 
 /*

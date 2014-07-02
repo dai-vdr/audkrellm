@@ -1,7 +1,7 @@
 /*
   AudKrellM: GKrellM Audacious Plugin
 
-  Copyright (C) 2007 dai <d+audacious@vdr.jp>
+  Copyright (C) 2007-2011 dai <d+audacious@vdr.jp>
   All rights reserved.
 
   Based on: GKrellMMS: GKrellM XMMS Plugin
@@ -159,7 +159,7 @@ void audkrellm_create_options_info( GtkWidget *notebook ) {
     _( "AudKrellM %s\n"
        "GKrellM Audacious Plugin\n"
        "\n"
-       "Copyright (C) 2007 dai <d+audacious@vdr.jp>\n"
+       "Copyright (C) 2007-2011 dai <d+audacious@vdr.jp>\n"
        "\n"
        "Based on: GKrellMMS: GKrellM XMMS Plugin\n"
        "Copyright (C) 2000-2002 Sander Klein Lebbink <sander@cerberus.demon.nl>\n"
